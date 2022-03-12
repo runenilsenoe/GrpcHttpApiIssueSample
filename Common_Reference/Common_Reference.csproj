@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Grpc.AspNetCore" Version="2.43.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<Protobuf Include="..\Proto\greet.proto" GrpcServices="Server"  ProtoRoot="..\Proto\" Link="greet.proto"/>
+		<Protobuf Include="..\Proto\google\api\annotations.proto" GrpcServices="Server"  ProtoRoot="..\Proto\" Link="google\api\annotations.proto"/>
+		<Protobuf Include="..\Proto\google\api\http.proto" GrpcServices="Server"  ProtoRoot="..\Proto\" Link="google\api\http.proto"/>
+	</ItemGroup>
+</Project>
